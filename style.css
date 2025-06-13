@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-image: url("Images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* 🎀 Login Page Styling */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 15vh auto;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px hotpink;
+}
+
+.login-container h2 {
+  color: #d63384;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  border: 1px solid #ffa6c9;
+  box-shadow: inset 0 0 5px #f5c6d6;
+  font-size: 1rem;
+}
+
+/* 🎀 Journal Page Styling */
+.journal-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 5vh auto;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 20px pink;
+}
+
+.journal-container h1 {
+  color: #d63384;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ffa6c9;
+  resize: none;
+  box-shadow: inset 0 0 5px #f5c6d6;
+}
+
+button {
+  margin-top: 1rem;
+  margin-right: 10px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#error-message, #status-message {
+  color: #c0392b;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="journal-container">
+    <h1>📔 My Personal Journal</h1>
+    <textarea id="entry" placeholder="Write your thoughts here..."></textarea>
+    <br />
+    <button onclick="saveEntry()">Save Entry</button>
+    <button onclick="logout()">Logout</button>
+    <p id="status-message"></p>
+  </div>
+
+  <script>
+    // Redirect to login if not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+
+    function saveEntry() {
+      const entry = document.getElementById("entry").value.trim();
+      if (entry) {
+        const date = new Date().toLocaleString();
+        localStorage.setItem("journalEntry_" + date, entry);
+        document.getElementById("status-message").textContent = "Entry saved 📝";
+        document.getElementById("entry").value = "";
+      } else {
+        document.getElementById("status-message").textContent = "Please write something first!";
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

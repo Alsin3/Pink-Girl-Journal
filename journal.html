@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Pink Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="journal-container">
+    <h2>🌸 My Journal</h2>
+
+    <!-- Daily Prompt -->
+    <div class="prompt-box">
+      <p id="prompt">Click below for a prompt ✨</p>
+      <button onclick="generatePrompt()">🎲 New Prompt</button>
+    </div>
+
+    <!-- Mood Tracker -->
+    <div class="mood-box">
+      <label>How are you feeling today?</label><br />
+      <span class="emoji" onclick="setMood('😄')">😄</span>
+      <span class="emoji" onclick="setMood('😐')">😐</span>
+      <span class="emoji" onclick="setMood('😔')">😔</span>
+      <span class="emoji" onclick="setMood('🥰')">🥰</span>
+      <span class="emoji" onclick="setMood('😠')">😠</span>
+    </div>
+
+    <!-- Journal Text -->
+    <textarea id="entry" placeholder="Dear journal..."></textarea>
+
+    <!-- Photo Upload -->
+    <div class="upload-box">
+      <label>Add a photo 📷:</label>
+      <input type="file" id="photoInput" accept="image/*" onchange="previewPhoto()" />
+      <img id="photoPreview" src="default-image.jpg" style="diaplay:none;"/>
+    </div>
+
+    <button onclick="saveEntry()">💾 Save Entry</button>
+
+    <div id="confirmation"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
